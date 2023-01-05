@@ -15,8 +15,8 @@ export class AuthenticationService {
   ) {}
 
   public login(email: string, password: string): void {
-    this.authenticationClient.login(email, password).subscribe((token) => {
-      localStorage.setItem(this.tokenKey, token);
+    this.authenticationClient.login(email, password).subscribe((data: any) => {
+      localStorage.setItem(this.tokenKey, data.token);
       this.router.navigate(['/']);
     });
   }
