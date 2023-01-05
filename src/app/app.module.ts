@@ -13,11 +13,14 @@ import { AppComponent } from './app.component';
 import { SecretComponent } from './secret/secret.component';
 
 import { TokenInterceptor } from './helpers/token.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SecretComponent
+    SecretComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { TokenInterceptor } from './helpers/token.interceptor';
     MatButtonModule,
     MatFormFieldModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
