@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { AuthGuard } from './helpers/auth.guard';
+import { SecretComponent } from './secret/secret.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: SecretComponent,
+    canActivate: [AuthGuard],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
