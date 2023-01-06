@@ -7,20 +7,27 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SecretComponent } from './secret/secret.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 import { TokenInterceptor } from './helpers/token.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SecretComponent,
-    LoginPageComponent
+    ProductPageComponent,
+    LoginPageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +40,10 @@ import { LoginPageComponent } from './login-page/login-page.component';
     MatFormFieldModule,
     MatCardModule,
     MatInputModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatTableModule,
     BrowserAnimationsModule
   ],
   providers: [

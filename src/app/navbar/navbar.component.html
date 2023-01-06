@@ -1,0 +1,13 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span>Pervolare</span>
+        <span class="example-spacer"></span>
+        
+        <div *ngIf="isLoggedIn === true">
+            <a mat-button href="/products">Productos</a>
+            <a mat-button href="/attributes">Atributos</a>
+            <a mat-raised-button color="primary" (click)="logout()">Logout</a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<br>
